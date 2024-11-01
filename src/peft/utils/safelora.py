@@ -236,7 +236,7 @@ def apply_safelora(configs):
         else:
             peft_weights = {name: f.get_tensor(name).to(torch.bfloat16) for name in f.keys()}
     if configs.select_layers_type == "threshold":
-        final_wieghts, _ = project_weights(configs, peft_weights, v)
+        final_weights, _ = project_weights(configs, peft_weights, v)
     elif configs.select_layers_type == "number":
         _, cos = project_weights(configs, peft_weights, v)
         thrs = numpy.sort(cos)[: configs.num_proj_layers][-1]
