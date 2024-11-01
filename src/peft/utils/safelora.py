@@ -69,7 +69,7 @@ class SafeLoraConfig:
         metadata={"help": "Devices are used in SafeLoRA. (gpu or cpu)"},
     )
 
-    saveWeights: bool = field(
+    save_weights: bool = field(
         default=True,
         metadata={"help": "Replacing and saving SafeLoRA weights to the original LoRA file."},
     )
