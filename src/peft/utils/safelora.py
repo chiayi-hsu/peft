@@ -29,7 +29,7 @@ from transformers.utils.hub import get_checkpoint_shard_files
 
 
 @dataclass
-class SafeLoRAConfig:
+class SafeLoraConfig:
     """
     This is the configuration class to store the configuration of a safeLoRA.
     """
